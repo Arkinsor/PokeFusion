@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'Ketchum';
+  src: url('./Ketchum.otf') format('opentype'); /* Adjust the path if necessary */
+}
+
+@font-face {
+  font-family: 'Poke';
+  src: url('./PokemonClassic.ttf') format('truetype'); /* Adjust the path if necessary */
+}
+
+:root {
+  font-family: 'Ketchum','Poke',Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Pokémon-themed colors */
+  --pokemon-red: #ff0000;
+  --pokemon-blue: #3b4cca;
+  --pokemon-yellow: #ffcc00;
+  --pokemon-white: #ffffff;
+
+  color: var(--pokemon-blue);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: var(--pokemon-yellow);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--pokemon-red);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  font-family: 'Poke';
+  min-width: 320px;
+  min-height: 100vh;
+ background-image: url(mick-haupt-KtTF68ZjBak-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  font-family: 'Ketchum';
+  font-size: 100px;
+  line-height: 1.1;
+  color: var(--pokemon-red);
+  -webkit-text-stroke: 4px yellow;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 2em 1.2em;
+  font-size: 1em;
+  margin: 10px;
+  font-weight: 500;
+  font-family: 'Poke';
+  background-color: var(--pokemon-white);
+  color: var(--pokemon-red);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  background-color: var(--pokemon-yellow);
+  border-color: var(--pokemon-yellow);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto var(--pokemon-yellow);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+     font-family: 'Poke';
+    color: var(--pokemon-blue);
+    background-color: var(--pokemon-white);
+  }
+  a:hover {
+    color: var(--pokemon-red);
+  }
+  button {
+    background-color: var(--pokemon-yellow);
+    color: var(--pokemon-blue);
+  }
+}

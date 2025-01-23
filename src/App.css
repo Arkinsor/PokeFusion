@@ -1,0 +1,147 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.pokemon-inputs {
+  margin-bottom: 20px;
+}
+
+.pokemon-inputs input {
+  padding: 10px;
+  margin: 5px;
+  width: 200px;
+  font-size: 16px;
+}
+
+.pokemon-inputs button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pokemon-display {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.pokemon-card {
+  width: 200px;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  background-color: white;
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.pokemon-card h2 {
+  font-size: 18px;
+}
+
+.pokemon-card p {
+  font-size: 14px;
+}
+
+.hybrid-display {
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-top: 20px;
+  background-color: white;
+}
+
+.hybrid-display h2 {
+  font-family: "Ketchum";
+  color: var(--pokemon-yellow);
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.pokemon-info {
+  margin-top: 15px;
+}
+
+.pokemon-info p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.error {
+  color: yellow;
+  font-size: 16px;
+}
+
+/* New styles for the loading screen */
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Keeps text centered */
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.84); /* Semi-transparent white background */
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+  color: #fff772;
+  text-align: center;
+}
+
+.loading-screen .loadname {
+  font-family: 'Poke';
+  font-size: 35px;
+}
+
+.loading-screen h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #fff772;
+}
+
+.loading-screen p {
+  font-size: 18px;
+  color: #fffde4;
+}
+
+.loading-screen::after {
+  content: url('./pngwing.png');
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  animation: loadd 3s infinite alternate ease-in-out; /* Animation duration adjusted */
+  margin-top: 20px;
+  left: 40vw; /* Start aligned to the left */
+  top: 65vh;
+}
+
+/* Loading spinner animation */
+@keyframes loadd {
+  0% {
+    transform: rotate(0deg); /* Start spinning */
+    left: 45%; /* Start at the left edge */
+  }
+  50% {
+    transform: rotate(360deg); /* Half rotation */
+    left: 52%; /* Move 10% of the viewport width to the right */
+  }
+  100% {
+    transform: rotate(0deg); /* Complete rotation */
+    left: 45%; /* Return to the left edge */
+  }
+}
